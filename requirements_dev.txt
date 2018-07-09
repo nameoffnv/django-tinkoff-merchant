@@ -1,0 +1,13 @@
+# Runtime dependencies
+Django
+
+# Others
+coverage
+flake8
+html5lib
+isort
+selenium
+tox
+transifex-client
+wheel
+mock
