@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tinkoff_payment', '0003_auto_20180602_1638'),
+        ('django_tinkoff_merchant', '0003_auto_20180602_1638'),
     ]
 
     operations = [

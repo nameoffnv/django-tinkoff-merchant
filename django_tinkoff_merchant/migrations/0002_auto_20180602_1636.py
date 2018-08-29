@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tinkoff_payment', '0001_initial'),
+        ('django_tinkoff_merchant', '0001_initial'),
     ]
 
     operations = [
@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('tax', models.CharField(choices=[('none', 'без НДС'), ('vat0', 'НДС по ставке 0%'), ('vat10', 'НДС чека по ставке 10%'), ('vat18', 'НДС чека по ставке 18%'), ('vat110', 'НДС чека по расчетной ставке 10/110'), ('vat118', 'НДС чека по расчетной ставке 18/118')], max_length=10, verbose_name='Ставка налога')),
                 ('ean13', models.CharField(blank=True, default='', max_length=20, verbose_name='Штрих-код')),
                 ('shop_code', models.CharField(blank=True, default='', max_length=64, verbose_name='Код магазина')),
-                ('receipt', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tinkoff_payment.Receipt', verbose_name='Чек')),
+                ('receipt', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='django_tinkoff_merchant.Receipt', verbose_name='Чек')),
             ],
             options={
                 'verbose_name_plural': 'Информация о товарах',
@@ -50,6 +50,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='receipt',
             name='payment',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tinkoff_payment.Payment', verbose_name='Платеж'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='django_tinkoff_merchant.Payment', verbose_name='Платеж'),
         ),
     ]

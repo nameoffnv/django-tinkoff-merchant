@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class TinkoffPaymentConfig(AppConfig):
-    name = 'tinkoff_payment'
+    name = 'django_tinkoff_merchant'
     verbose_name = 'Тинькофф'
