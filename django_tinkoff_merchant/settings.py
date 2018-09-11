@@ -5,6 +5,7 @@ DEFAULT_CONFIG = {
     'URLS': {
         'INIT': 'https://securepay.tinkoff.ru/v2/Init',
         'GET_STATE': 'https://securepay.tinkoff.ru/v2/GetState',
+        'CANCEL': 'https://securepay.tinkoff.ru/v2/Cancel',
     },
     'TAXATION': 'usn_income',
     'ITEM_TAX': 'none',

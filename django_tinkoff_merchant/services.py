@@ -89,3 +89,7 @@ class MerchantAPI:
     def status(self, p: Payment) -> Payment:
         response = self._request('GET_STATE', requests.post, {'PaymentId': p.payment_id}).json()
         return self.update_payment_from_response(p, response)
+
+    def cancel(self, p: Payment) -> Payment:
+        response = self._request('CANCEL', requests.post, {'PaymentId': p.payment_id}).json()
+        return self.update_payment_from_response(p, response)
